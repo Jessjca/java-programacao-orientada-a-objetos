@@ -6,14 +6,13 @@ public class VerificaIdade {
     public static void main(String[] args) {
         try (Scanner scanner = new Scanner(System.in)) {
             System.out.println("Digite a data de nascimento (no formato yyyy-mm-dd): ");
-            String dataNascimentoUsuario = scanner.nextLine();
+            String dNascimentoUsuario = scanner.nextLine();
 
-            LocalDate dataNascimento = LocalDate.parse(dataNascimentoUsuario);
-
-            LocalDate dataAtual = LocalDate.now();
+            LocalDate dNascimento = LocalDate.parse(dNascimentoUsuario);
+            LocalDate dAtual = LocalDate.now();
 
             //calcula o período entre a data de nascimento da pessoa e a data atual
-            Period periodo = Period.between(dataNascimento, dataAtual);
+            Period periodo = Period.between(dNascimento, dAtual);
             //atribui a variavel idade o valor de período em anos
             int idade = periodo.getYears();
 
